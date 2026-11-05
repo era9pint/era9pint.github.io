@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秘密研究所好好学习天天向上-秘密研究所学习方法_学习研究所自习规划与成长记录</title>
+<meta name="description" content="秘密研究所好好学习天天向上是一个以学习成长为主题的站点首页，整理研究所式学习方法、每日自习规划、专注记录与复盘清单，帮助访问者把“好好学习天天向上”落到每天可执行的学习安排中。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2a4a'/%3E%3Ccircle cx='32' cy='27' r='11' fill='none' stroke='%23f2c14e' stroke-width='3'/%3E%3Cpath d='M32 20v7l5 4' stroke='%23f2c14e' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M16 46h32M20 52h24' stroke='%2367d0c4' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#182338;
+    --ink-soft:#3d4a63;
+    --paper:#f7f5ef;
+    --card:#ffffff;
+    --navy:#1b2a4a;
+    --navy-2:#24385f;
+    --gold:#e0a72e;
+    --teal:#2f9c92;
+    --line:#e2ded2;
+    --radius:14px;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.75;
+    font-size:16px;
+  }
+  a{color:var(--navy-2);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img,svg{max-width:100%;}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+
+  /* 顶部 */
+  .topbar{
+    background:var(--navy);
+    color:#eef2f9;
+    border-bottom:3px solid var(--gold);
+  }
+  .topbar .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:18px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{
+    width:44px;height:44px;flex:0 0 44px;border-radius:12px;
+    background:linear-gradient(160deg,#24385f,#132039);
+    border:1px solid rgba(224,167,46,.55);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .brand-name{
+    font-size:1.02rem;font-weight:700;letter-spacing:.02em;color:#fff;
+    line-height:1.35;
+  }
+  .brand-sub{display:block;font-size:.72rem;font-weight:400;color:#a9b8d4;letter-spacing:.12em;}
+  nav.mainnav{display:flex;gap:4px;flex-wrap:wrap;}
+  nav.mainnav a{
+    color:#dbe4f3;font-size:.9rem;padding:7px 12px;border-radius:8px;
+  }
+  nav.mainnav a:hover{background:rgba(255,255,255,.1);text-decoration:none;color:#fff;}
+
+  /* 首屏 */
+  .hero{
+    background:
+      radial-gradient(900px 420px at 88% -10%, rgba(47,156,146,.22), transparent 65%),
+      linear-gradient(175deg,#1b2a4a 0%,#20304f 58%,#223553 100%);
+    color:#eaf0fa;
+    padding:56px 0 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-90px;bottom:-120px;width:340px;height:340px;
+    border:1px solid rgba(224,167,46,.28);border-radius:50%;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:44px;align-items:center;position:relative;z-index:1;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.78rem;letter-spacing:.16em;color:var(--gold);
+    border:1px solid rgba(224,167,46,.45);border-radius:999px;
+    padding:5px 14px;margin:0 0 18px;
+  }
+  h1{
+    font-size:clamp(1.6rem,3.6vw,2.35rem);
+    line-height:1.35;margin:0 0 16px;font-weight:800;color:#fff;
+    letter-spacing:.01em;
+  }
+  .hero p.lead{
+    margin:0 0 24px;font-size:1rem;color:#c9d5e8;max-width:36em;
+  }
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-block;border-radius:10px;padding:11px 22px;
+    font-size:.94rem;font-weight:600;border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--gold);color:#1b2233;}
+  .btn-primary:hover{background:#efb945;text-decoration:none;}
+  .btn-ghost{background:transparent;color:#e7eefb;border-color:rgba(231,238,251,.4);}
+  .btn-ghost:hover{background:rgba(255,255,255,.09);text-decoration:none;}
+  .hero-panel{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.16);
+    border-radius:var(--radius);
+    padding:20px 20px 16px;
+    backdrop-filter:blur(2px);
+  }
+  .hero-panel h2{
+    font-size:.82rem;letter-spacing:.14em;color:var(--gold);
+    margin:0 0 12px;font-weight:600;
+  }
+  .hero-panel ul{list-style:none;margin:0;padding:0;font-size:.9rem;color:#d3dded;}
+  .hero-panel li{display:flex;gap:10px;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.12);}
+  .hero-panel li:last-child{border-bottom:0;}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex:0 0 8px;margin-top:9px;}
+
+  /* 区块通用 */
+  section{padding:54px 0;}
+  section.alt{background:#fdfcf8;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{max-width:44em;margin-bottom:28px;}
+  .sec-tag{
+    font-size:.76rem;letter-spacing:.16em;color:var(--teal);
+    font-weight:700;margin:0 0 8px;
+  }
+  h2.sec-title{
+    font-size:clamp(1.22rem,2.4vw,1.55rem);margin:0 0 10px;font-weight:800;color:var(--navy);
+  }
+  .sec-head p{margin:0;color:var(--ink-soft);font-size:.95rem;}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .grid-2{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:start;}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px 22px 20px;box-shadow:0 1px 0 rgba(24,35,56,.03);
+  }
+  .card h3{margin:8px 0 8px;font-size:1.02rem;color:var(--navy);font-weight:700;}
+  .card p{margin:0;font-size:.9rem;color:var(--ink-soft);}
+  .card .ic{
+    width:38px;height:38px;border-radius:10px;background:#eef4f3;
+    display:flex;align-items:center;justify-content:center;
+  }
+
+  /* 方法清单 */
+  .steps{list-style:none;margin:0;padding:0;counter-reset:st;}
+  .steps li{
+    position:relative;padding:0 0 20px 46px;counter-increment:st;
+  }
+  .steps li::before{
+    content:counter(st,decimal-leading-zero);
+    position:absolute;left:0;top:2px;width:32px;height:32px;border-radius:9px;
+    background:var(--navy);color:var(--gold);font-size:.8rem;font-weight:700;
+    display:flex;align-items:center;justify-content:center;letter-spacing:.04em;
+  }
+  .steps li:not(:last-child)::after{
+    content:"";position:absolute;left:16px;top:38px;bottom:6px;width:1px;background:var(--line);
+  }
+  .steps strong{display:block;color:var(--navy);font-size:.98rem;margin-bottom:3px;}
+  .steps span{font-size:.9rem;color:var(--ink-soft);}
+
+  /* 计划表 */
+  table.plan{
+    width:100%;border-collapse:collapse;font-size:.9rem;background:#fff;
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  }
+  table.plan th,table.plan td{
+    text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;
+  }
+  table.plan th{background:#f2f1e9;color:var(--navy);font-weight:700;font-size:.84rem;letter-spacing:.04em;}
+  table.plan tr:last-child td{border-bottom:0;}
+  table.plan td:first-child{white-space:nowrap;color:var(--teal);font-weight:600;}
+
+  /* 记录工具 */
+  .tracker{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;}
+  .tracker h3{margin:0 0 6px;font-size:1rem;color:var(--navy);}
+  .tracker .hint{margin:0 0 14px;font-size:.84rem;color:#7a8499;}
+  .search-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .search-row input{
+    flex:1 1 180px;min-width:0;padding:10px 13px;border:1px solid #d8d4c8;border-radius:9px;
+    font-size:.92rem;font-family:inherit;background:#fdfcf8;color:var(--ink);
+  }
+  .search-row input:focus{outline:2px solid rgba(47,156,146,.4);outline-offset:1px;}
+  .search-row button{
+    padding:10px 18px;border-radius:9px;border:1px solid var(--navy);
+    background:var(--navy);color:#fff;font-size:.9rem;font-weight:600;font-family:inherit;cursor:pointer;
+  }
+  .search-row button:hover{background:var(--navy-2);}
+  .filter-chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0;}
+  .chip{
+    font-size:.82rem;padding:5px 13px;border-radius:999px;border:1px solid #d8d4c8;
+    background:#fdfcf8;color:var(--ink-soft);cursor:pointer;font-family:inherit;
+  }
+  .chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .log-list{list-style:none;margin:16px 0 0;padding:0;}
+  .log-list li{
+    display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px dashed var(--line);
+    font-size:.9rem;
+  }
+  .log-list .tag{
+    flex:0 0 auto;font-size:.72rem;padding:2px 9px;border-radius:6px;
+    background:#eef4f3;color:#22786f;font-weight:600;margin-top:3px;
+  }
+  .log-list .empty{color:#7a8499;border-top:1px dashed var(--line);padding:14px 0;display:block;}
+
+  /* 引用 */
+  .quote{
+    border-left:4px solid var(--gold);background:#fff;border-radius:0 var(--radius) var(--radius) 0;
+    padding:18px 22px;font-size:.94rem;color:var(--ink-soft);
+  }
+  .quote cite{display:block;margin-top:8px;font-size:.82rem;color:#8a92a3;font-style:normal;}
+
+  /* 下载区 */
+  .download-box{
+    display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+    background:var(--navy);color:#e9f0fb;border-radius:var(--radius);
+    padding:26px 28px;border:1px solid #2c4269;
+  }
+  .download-box h2{margin:0 0 6px;font-size:1.12rem;color:#fff;}
+  .download-box p{margin:0;font-size:.88rem;color:#b9c8de;max-width:38em;}
+  .btn-disabled{
+    background:rgba(255,255,255,.14);color:#cfd9e8;border:1px solid rgba(255,255,255,.28);
+    pointer-events:none;
+  }
+
+  /* 页尾 */
+  footer{
+    background:#132039;color:#a8b7cf;padding:34px 0 26px;font-size:.86rem;
+  }
+  footer .foot-top{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:18px;}
+  footer strong{color:#e6edf8;font-size:.94rem;display:block;margin-bottom:6px;}
+  footer a{color:#c3d1e6;}
+  footer .foot-links{display:flex;gap:16px;flex-wrap:wrap;}
+  footer .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.12);padding-top:16px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:#8194b0;font-size:.8rem;
+  }
+
+  @media (max-width:860px){
+    .hero-grid,.grid-2{grid-template-columns:1fr;gap:26px;}
+    .grid-3{grid-template-columns:1fr 1fr;}
+    .hero{padding:40px 0 44px;}
+  }
+  @media (max-width:600px){
+    body{font-size:15.5px;}
+    .grid-3{grid-template-columns:1fr;}
+    section{padding:38px 0;}
+    .topbar .wrap{padding-top:12px;padding-bottom:10px;}
+    nav.mainnav a{padding:6px 9px;font-size:.85rem;}
+    .brand-name{font-size:.94rem;}
+    .download-box{padding:22px;}
+    table.plan th,table.plan td{padding:10px 11px;font-size:.85rem;}
+    table.plan td:first-child{white-space:normal;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="13" r="7" stroke="#e0a72e" stroke-width="2"/>
+          <path d="M16 8.5V13l3 2.4" stroke="#e0a72e" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 24h20M9 28h14" stroke="#67d0c4" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">秘密研究所好好学习天天向上
+        <span class="brand-sub">STUDY RESEARCH LAB</span>
+      </span>
+    </div>
+    <nav class="mainnav" aria-label="主导航">
+      <a href="#method">学习方法</a>
+      <a href="#plan">每日安排</a>
+      <a href="#record">学习记录</a>
+      <a href="#notes">经验问答</a>
+      <a href="#download">资料下载</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">学习成长主题首页</p>
+        <h1>秘密研究所好好学习天天向上</h1>
+        <p class="lead">把“好好学习天天向上”当成一套可执行的研究流程：先确定问题，再安排时段，最后留下记录。秘密研究所好好学习天天向上围绕学习方法、每日自习规划与复盘记录，整理成一份能直接照着做的首页。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#method">查看学习方法</a>
+          <a class="btn btn-ghost" href="#record">打开学习记录</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="首页要点">
+        <h2>研究所今日要点</h2>
+        <ul>
+          <li><span class="dot" aria-hidden="true"></span><span>一次只研究一个问题，写清它到底在问什么。</span></li>
+          <li><span class="dot" aria-hidden="true"></span><span>用固定时段代替“有空再学”，让进度可预期。</span></li>
+          <li><span class="dot" aria-hidden="true"></span><span>每天留五分钟记录，第二天接着上次的线索。</span></li>
+          <li><span class="dot" aria-hidden="true"></span><span>周末只做复盘与补漏，不新开太多内容。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="method">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">研究方向</p>
+        <h2 class="sec-title">像做研究一样学习：三条主线</h2>
+        <p>秘密研究所好好学习天天向上不做泛泛的鸡汤，而是把学习拆成可以观察、可以记录、可以调整的三条主线。下面每一条都对应一个具体动作，读完即可开始。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="ic" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#2f9c92" stroke-width="2"/><path d="M16 16l4 4" stroke="#2f9c92" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>选题：把问题写小</h3>
+          <p>学习前先写一句“我今天要弄懂什么”，范围控制在一页笔记以内。问题越小，越容易在当天得到答案，也越容易判断自己是否真的学会了。</p>
+        </article>
+        <article class="card">
+          <div class="ic" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="2.5" stroke="#2f9c92" stroke-width="2"/><path d="M4 10h16M9 3v4M15 3v4" stroke="#2f9c92" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>排期：用时段代替计划表</h3>
+          <p>与其写满待办，不如先固定两段各四十分钟的学习时段。时段固定之后，内容可以按当天状态微调，节奏却不会被打乱。</p>
+        </article>
+        <article class="card">
+          <div class="ic" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 19V9M12 19V5M19 19v-7" stroke="#2f9c92" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>记录：让进度看得见</h3>
+          <p>每次学习结束写一行结论，包含今天解决了什么、卡在哪里。记录比感觉可靠，它决定了下一段时间该从哪里继续。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="plan">
+    <div class="wrap">
+      <div class="grid-2">
+        <div>
+          <p class="sec-tag">执行顺序</p>
+          <h2 class="sec-title">一天四步：从启动到收尾</h2>
+          <p style="color:var(--ink-soft);font-size:.95rem;margin:0 0 24px;">秘密研究所好好学习天天向上推荐的四步流程，重点不在于学多久，而在于每一步都有明确产出。按顺序做完，一天的学习就有始有终。</p>
+          <ol class="steps">
+            <li><strong>启动：三分钟回看</strong><span>翻出上一次的结论，确认今天从哪一句接着往下做，减少重新进入状态的时间。</span></li>
+            <li><strong>主攻：一段只做一件事</strong><span>把最难的内容放在精力最好的时段，中途不做资料收集，只解决当前问题。</span></li>
+            <li><strong>整理：写成一页</strong><span>用自己的话把刚学的内容压缩成一页，写不出来的部分就是明天要补的漏洞。</span></li>
+            <li><strong>收尾：留一句明日线索</strong><span>写一句“明天从这里开始”，让第二天的启动几乎不需要额外准备。</span></li>
+          </ol>
+        </div>
+        <div>
+          <table class="plan">
+            <caption style="text-align:left;font-size:.8rem;color:#7a8499;padding-bottom:10px;">参考时段安排（可按个人作息调整）</caption>
+            <thead>
+              <tr><th>时段</th><th>内容</th><th>产出</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>早晨</td><td>回看昨日结论，确定今日问题</td><td>一句问题</td></tr>
+              <tr><td>上午</td><td>主攻最难内容，专注四十分钟</td><td>一段理解</td></tr>
+              <tr><td>下午</td><td>练习与自测，检验是否会用</td><td>一组练习</td></tr>
+              <tr><td>晚间</td><td>压缩成一页笔记，写明日线索</td><td>一页总结</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size:.84rem;color:#7a8499;margin:12px 0 0;">表格中的时段是通用参考，不构成具体承诺；实际执行以个人作息与任务难度为准。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="record">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">学习记录</p>
+        <h2 class="sec-title">把今天的进度写下来</h2>
+        <p>下面是页面内置的记录检索区，可按关键词或分类查看已有的学习条目。秘密研究所好好学习天天向上强调“写下来才算学过”，记录区就是这条原则的落点。</p>
+      </div>
+      <div class="grid-2">
+        <div class="tracker">
+          <h3>检索学习条目</h3>
+          <p class="hint">输入关键词，或选择分类筛选；清空输入可查看全部条目。</p>
+          <div class="search-row">
+            <label for="logSearch" style="position:absolute;left:-9999px;">搜索学习记录</label>
+            <input id="logSearch" type="search" placeholder="例如：复盘、专注、笔记" autocomplete="off">
+            <button type="button" id="clearBtn">清空</button>
+          </div>
+          <div class="filter-chips" role="group" aria-label="按分类筛选">
+            <button class="chip" type="button" data-cat="全部" aria-pressed="true">全部</button>
+            <button class="chip" type="button" data-cat="方法" aria-pressed="false">方法</button>
+            <button class="chip" type="button" data-cat="记录" aria-pressed="false">记录</button>
+            <button class="chip" type="button" data-cat="复盘" aria-pressed="false">复盘</button>
+          </div>
+          <p id="logCount" style="font-size:.82rem;color:#7a8499;margin:14px 0 0;">共 6 条记录</p>
+        </div>
+        <div>
+          <ul class="log-list" id="logList">
+            <li data-cat="方法"><span class="tag">方法</span><span>把“弄懂一章”改写成三个小问题，当天只回答第一个。</span></li>
+            <li data-cat="记录"><span class="tag">记录</span><span>学习结束后写一行结论：解决了什么、卡在哪里。</span></li>
+            <li data-cat="复盘"><span class="tag">复盘</span><span>周末回看本周笔记，只挑两处漏洞补齐，不重开新内容。</span></li>
+            <li data-cat="方法"><span class="tag">方法</span><span>专注时段内把手机放到视线之外，减少中途切换。</span></li>
+            <li data-cat="记录"><span class="tag">记录</span><span>用一页纸压缩当天内容，写不出来即为明日重点。</span></li>
+            <li data-cat="复盘"><span class="tag">复盘</span><span>每月整理一次学习记录，观察哪个时段效率最稳定。</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="notes">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">经验问答</p>
+        <h2 class="sec-title">常见问题：怎么坚持下去</h2>
+        <p>秘密研究所好好学习天天向上收集的几类典型疑问，回答都落在可操作的动作上，而不是空泛的鼓励。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3>总是开始不了怎么办？</h3>
+          <p>把启动动作缩到三分钟：只回看上一条记录，并写下一个问题。启动成本足够低时，继续学下去往往比想象中容易。</p>
+        </article>
+        <article class="card">
+          <h3>学完就忘，是记性差吗？</h3>
+          <p>多数情况不是记性问题，而是缺少提取练习。学完当天用自己的话复述一遍，隔天再自测一次，记忆会更稳。</p>
+        </article>
+        <article class="card">
+          <h3>计划总被打乱怎么办？</h3>
+          <p>保留时段，放宽内容。固定两个学习时段即可，具体学什么按当天状态调整，这样计划不会因为一次中断而整体失效。</p>
+        </article>
+      </div>
+      <div class="quote" style="margin-top:26px;">
+        “好好学习天天向上”不是一句口号，而是一种每天都能验证的节奏：今天问清一个问题，写下一行结论，明天接着往下走。
+        <cite>—— 秘密研究所好好学习天天向上 学习说明</cite>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="download-box">
+        <div>
+          <h2>下载学习记录模板</h2>
+          <p>模板包含每日问题、专注时段、一页总结与明日线索四个栏目，可打印后手写，也可按需录入电子文档。下载入口正在准备中，上线后即可获取。</p>
+        </div>
+        <a class="btn btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <strong>秘密研究所好好学习天天向上</strong>
+        <span>学习方法 · 每日安排 · 学习记录 · 经验问答</span>
+      </div>
+      <div class="foot-links">
+        <a href="#method">学习方法</a>
+        <a href="#plan">每日安排</a>
+        <a href="#record">学习记录</a>
+        <a href="#notes">经验问答</a>
+        <a href="#top">回到顶部</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>秘密研究所好好学习天天向上 · 学习成长主题首页</span>
+      <span>页面内容为学习整理与经验分享，具体安排请结合个人情况调整。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('logSearch');
+  var clearBtn = document.getElementById('clearBtn');
+  var list = document.getElementById('logList');
+  var countEl = document.getElementById('logCount');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var items = Array.prototype.slice.call(list.querySelectorAll('li'));
+  var activeCat = '全部';
+
+  function apply(){
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(li){
+      var text = li.textContent.toLowerCase();
+      var cat = li.getAttribute('data-cat') || '';
+      var okCat = (activeCat === '全部') || (cat === activeCat);
+      var okText = !q || text.indexOf(q) !== -1;
+      var show = okCat && okText;
+      li.style.display = show ? '' : 'none';
+      if(show) shown++;
+    });
+    countEl.textContent = '共 ' + shown + ' 条记录';
+    var empty = document.getElementById('logEmpty');
+    if(shown === 0){
+      if(!empty){
+        empty = document.createElement('li');
+        empty.id = 'logEmpty';
+        empty.className = 'empty';
+        empty.textContent = '没有匹配的记录，换个关键词或选择“全部”试试。';
+        list.appendChild(empty);
+      }
+    } else if(empty){
+      empty.remove();
+    }
+  }
+
+  input.addEventListener('input', apply);
+  clearBtn.addEventListener('click', function(){
+    input.value = '';
+    activeCat = '全部';
+    chips.forEach(function(c){
+      c.setAttribute('aria-pressed', c.getAttribute('data-cat') === '全部' ? 'true' : 'false');
+    });
+    apply();
+    input.focus();
+  });
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      activeCat = c.getAttribute('data-cat');
+      chips.forEach(function(x){ x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); });
+      apply();
+    });
+  });
+  apply();
+})();
+</script>
+</body>
+</html>
